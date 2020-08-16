@@ -1,6 +1,6 @@
 name: VariableDemo
 
-on: [push,workflow_dispatch]
+on: [push]
 env:
  user_name: "Chaminda"
  demo_name: "Variable Demo"  
