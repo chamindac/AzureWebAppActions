@@ -4,7 +4,8 @@ name: VariableDemo
 # When to trigger the workflow
 on: [push,workflow_dispatch]
 env:
- user_name: "Chaminda"  
+ user_name: "Chaminda"
+ demo_name: "Variable Demo"  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "VariableUsageJob"
@@ -17,3 +18,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Using Workflow Variables
       run: echo Hello, $user_name!
+           echo Welcome to $demo_name!!!
