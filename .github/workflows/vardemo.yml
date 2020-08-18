@@ -8,6 +8,7 @@ env:
  $varwith$: "valwith$" 
  1mynewnumvar: "numvarval"
  my-var: "DashVarvalue"
+ my1_var1: "my1_var1value"
 
 jobs:
  VariableUsageJob:
