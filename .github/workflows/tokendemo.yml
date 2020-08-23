@@ -9,8 +9,10 @@ jobs:
       
       - name: Step is going to fail intermittent
         # Ext with 1 or 0 in random
-        run: RANDOM=$$ 
-            exit $(($RANDOM%2)) 
+        run: RANDOM=$$
+             ExitCode=$(($RANDOM%2)) 
+             echo $ExitCode
+             exit $ExitCode
          
       - name: Step To run on failure
         if: ${{ failure() }}
