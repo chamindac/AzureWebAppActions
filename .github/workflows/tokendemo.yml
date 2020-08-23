@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Step is going to pass
-        run: rcho Passing step
+        run: echo Passing step
       
       - name: Step is going to fail intermittent
         # Ext with 1 or 0 in random
