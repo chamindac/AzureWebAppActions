@@ -3,23 +3,13 @@ on: [push]
 jobs:
   FailJobIssueDemo:
     runs-on: ubuntu-latest
-    env :
-      myexitcode: 0
     steps:
       - name: Step is going to pass
         run: echo Passing step
       
-      - name: Create exit Code
-        run: RANDOM=$$
-             ExitCode=$(($RANDOM%2)) 
-             echo "::set-env name=myexitcode::$ExitCode"
-      
-      - name: Print exit Code
-        run: echo $myexitcode
-      
       - name: Step is going to fail intermittent
         # Ext with 1 or 0 in random
-        run: exit $myexitcode
+        run: exit (shuf -i 0-1-n 1)
          
       - name: Step To run on failure
         if: ${{ failure() }}
